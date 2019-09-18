@@ -1,6 +1,6 @@
-a = input("Sisesta esimene arv: ")
-b = input("Sisesta teine arv: ")
+a = int(input("Sisesta esimene arv: "))
+b = int(input("Sisesta teine arv: "))
 if a < b:
-    print (a)
+    print ("Miinimum on: " + str(a))
 else:
-    print (b)
+    print ("Miinimum on: " + str(b))

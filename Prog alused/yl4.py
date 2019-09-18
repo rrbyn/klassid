@@ -1,10 +1,10 @@
-a = input("Sisestage esimene arv: ")
-b = input("Sisestage teine arv: ")
-c = input("Sisestage kolmas arv: ")
+a = int(input("Sisestage esimene arv: "))
+b = int(input("Sisestage teine arv: "))
+c = int(input("Sisestage kolmas arv: "))
 if a < b < c:
-    print (c)
+    print ("Maksimum on: "+ str(c))
 elif a < b > c:
-    print (b)
+    print ("Maksimum on: "+ str(b))
 else:
-    print (a)
+    print ("Maksimum on: "+ str(a))
     
