@@ -1,29 +1,36 @@
 import random
 
-compChoice = random.randint(0,2)
-playerChoice = int(input("Valige 1:Kivi , 2:Paber , 3: Käärid")) - 1
+def RPSgame():
+    
+    compChoice = random.randint(0,2)
+    playerChoice = int(input("Valige 1:Kivi , 2:Paber , 3: Käärid")) - 1
 
-gamePlay = ["R","P","S"]
-gameWin =  ["S","R","P"]
+    gamePlay = ["Kivi","Paber","Käärid"]
+    gameWin =  ["Käärid","Kivi","Paber"]
 
-print ("playerchoice: " + str(playerChoice))
-print ("compChoice: " + str(compChoice))
+    print ("Te valisite: " + gamePlay[playerChoice])
+    print ("Arvuti valis: " + gamePlay[compChoice])
 
-#gamePlayC = gamePlay[compChoice]
-#gamePlayP = gamePlay[playerChoice]
+    playerEnemy = gameWin.index(gamePlay[compChoice])
+    compEnemy = gameWin.index(gamePlay[playerChoice])
 
-if compChoice == playerChoice:
-    print ("Viik")
-elif gamePlay[compChoice] == gameWin[compChoice]:
-    print ("Võitis arvuti")
-elif gamePlay[playerChoice] == gameWin[playerChoice]:
-    print ("Võitis inimene")
-else:
-    print (playerChoice)
-    print (compChoice)
-    print ("Machine broke")
-  
+    if compChoice == playerChoice:
+        print ("Viik")
+    elif compChoice == compEnemy:
+        print ("Võitis arvuti")
+    elif playerChoice == playerEnemy:
+        print ("Te võitsite")
+
+playCond = 1
+
+while playCond == 1:
+    RPSgame()
+    playCond = int(input("Kirjutage 1 kui soovite edasi mängida või 0 kui ei soovi"))
+    
     
 
 
-    
+
+
+            
+
